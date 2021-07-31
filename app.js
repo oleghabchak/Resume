@@ -1,17 +1,13 @@
 "use strict";
+const add = {
+    a: 8,
+    b:3
+};
+const clone = Object.assign({}, add);
 
-const arr =[2,465,4,0,7,8];
+clone.d = 20;
 
-// arr.pop();
-// console.log(arr);
-// for (let i = 0; i < arr.length; i++) {
-//     console.log(arr[i]);
-// }
-
-// for ( let val of arr) {
-//     console.log(val);
-// }
-
-arr.forEach(function(it, i, arr) {
-    console.log(`${i}: ${it} всередині ${arr}`);
-});
+console.log(add);
+console.log(clone);
+const ondArray = ['a', 'b'];
+const newArr = ondArray;
