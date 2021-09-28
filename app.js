@@ -8,6 +8,5 @@ const clone = Object.assign({}, add);
 clone.d = 20;
 
 console.log(add);
-console.log(clone);
 const ondArray = ['a', 'b'];
 const newArr = ondArray;
