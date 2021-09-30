@@ -1,14 +1,12 @@
-"use strict";
-const add = {
-    a: 8,
-    b:3
-};
-const clone = Object.assign({}, add);
+const log = function (a, b, ...rest) {
+    console.log(a,b, rest);
+}
 
-clone.d = 20;
+log ('basic', 'rest', 'operator', 'usage');
 
-console.log(add);
+function calcOrDouble( number, basic) {
+    basic = basic || 2;
+    console.log(number * basic);
+}
 
-
-const ondArray = ['a', 'b'];
-const newArr = ondArray;
+calcOrDouble(3,5)
