@@ -37,7 +37,7 @@
 }
 
 /*========== BASE ==========*/
-*, ::before, ::after {
+*,::before,::after {
   box-sizing: border-box;
 }
 
@@ -109,7 +109,7 @@ img {
 
 /*========== LAYOUT ==========*/
 .bd-container{
-  min-width: 968px;
+  max-width: 968px;
   width: calc(100% - 3rem);
   margin-left: var(--mb-3);
   margin-right: var(--mb-3);
@@ -133,7 +133,7 @@ img {
 }
 
 /*========== NAV ==========*/
-nav{
+.nav{
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -143,7 +143,7 @@ nav{
 @media screen and (max-width: 968px) {
   .nav__menu{
     position: fixed;
-    bottom: var(--header-height);
+    bottom: -100%;
     left:0;
     width: 100%;
     padding: 2rem 1.5rem;
@@ -183,14 +183,23 @@ nav{
   font-weight: var(--font-medium);
 }
 
-nav.nav__link:hover{
+.nav__link:hover{
   color:var(--title-color);
 }
-/* Show menu */
 
+.nav__icon{
+  font-size: 1.2rem;
+  margin-bottom: var(--mb-1);
+}
+/* Show menu */
+.show-menu{
+  bottom: var(--header-height);
+}
 
 /* Active menu link */
-
+.active-link{
+  color:var(--title-color);
+}
 
 /*========== HOME ==========*/
 
