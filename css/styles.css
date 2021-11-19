@@ -205,10 +205,30 @@ img {
 
 
 /*========== SOCIAL ==========*/
+.social__container{
+grid-template-columns: max-content;
+gap: 1rem;
+}
 
+.social__link{
+  display: inline-flex;
+  align-items:center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+.social__link:hover{
+  font-weight: bold;
+  color: var(--title-color);
+}
 
+.social__icon{
+  font-size: 1.2rem;
+  margin-right: .25rem;
+}
 /*========== PROFILE ==========*/
-
+.profile__description{
+  text-align: left;
+}
 
 /*========== EDUCATION AND EXPERIENCE ==========*/
 
