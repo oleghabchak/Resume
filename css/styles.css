@@ -47,10 +47,28 @@ html {
 }
 
 /*========== Variables Dark theme ==========*/
-
+body.dark-theme{
+  --title-color: #F2F2F2;
+  --text-color: #BFBFBF;
+  --container-color: #212121;
+  --container-color-alt: #181616;
+  --body-color: #2B2B2B;
+}
 
 /*========== Button Dark/Light ==========*/
-
+.change-theme{
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  display: flex;
+  color: var(--text-color-light);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.change-theme:hover{
+  color: var(--title-color);
+}
+ 
 
 /*========== Font size variables to scale cv ==========*/
 
@@ -365,6 +383,11 @@ margin-top: .25rem;
 }
 
 /*========== REFERENCES ==========*/
+.references__column{
+  display: grid;
+  grid-template-columns: 300px 300px ;
+}
+  
 .references__content{
   gap:.25rem;
 }
@@ -385,14 +408,112 @@ color: var(--text-color-light);
 }
 
 /*========== INTERESTS ==========*/
+.interests__container{
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: var(--mb-2);
+}
 
+.interests__content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interests__icon{
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  margin-bottom: .25rem;
+}
 
 /* Scroll top */
+.scrolltop{
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem;
+  background-color: var(--container-color-alt);
+  border-radius: .4rem;
+  z-index: 4s;
+  visibility: hidden;
+}
 
+.scrolltop__icon{
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.show-scroll{
+visibility: visible;
+bottom: 5rem;
+}
 
 /*========== MEDIA QUERIES ==========*/
 /* For small devices, menu two columns */
 
-
+@media screen and (min-width: 320px) {
+  .nav__list{
+    grid-template-columns: repeat(2,1rf);
+    gap: 1rem .5rem;
+  }
+}
 /* Classes modified for large screen size */
 
+@media screen and (min-width: 777px) {
+  body{
+    margin: 3rem 0;
+  }
+
+  .bd-container{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .l-header,
+  .scrolltop{
+    display: none;
+  }
+
+  .resume{
+    display: grid;
+    grid-template-columns:.5fr 1fr ;
+    background-color: var(--container-color);
+    box-shadow: 0 0 8px rgba(13,12,12, .15);
+  }
+  
+  .resume__left{
+    background-color: var(--container-color-alt);
+  }
+
+  .resume__left,
+  .resume__right{padding: 0 1.5rem;}
+
+  .section-title,
+  .profile__description{
+    text-align: initial;
+  }
+
+  .home__container{
+    gap: 1.5rem;
+  }
+
+  .home__button-movil{
+    display: none;
+  }
+
+  .references__container{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .languages__content{
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 3.5rem;
+  }
+
+  .interests__container{
+    grid-template-columns: repeat(3, max-content );
+    column-gap: 5rem;
+  }
+}
