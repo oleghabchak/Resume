@@ -62,7 +62,7 @@ body.dark-theme{
   top: 2.2rem;
   display: flex;
   color: var(--text-color-light);
-  font-size: 2rem;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .change-theme:hover{
@@ -75,6 +75,18 @@ body.dark-theme{
 
 /*========== Generate PDF button ==========*/
 
+.generate-pdf{
+  display: none;
+  position: absolute;
+  top: 2.2rem;
+  font-size: 1.5rem;
+  font-style: 1.2rem;
+  color: var(--text-color-light);
+  cursor: pointer;
+}
+.generate-pdf:hover{
+  color: var(--title-color);
+}
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
 body{
@@ -309,15 +321,18 @@ gap: 1rem;
 }
 
 /*========== EDUCATION AND EXPERIENCE ==========*/
-.education__content{
+.education__content,
+.experience__content{
   display: flex;
 }
 
-.education__time{
+.education__time,
+.experience__time{
   padding-right: 1rem;
 }
 
-.education__rounder{
+.education__rounder,
+.experience__rounder{
 position: relative;
 display: block;
 width: 16px;
@@ -327,7 +342,8 @@ border-radius: 50%;
 margin-top: .25rem;
 }
 
-.education__line{
+.education__line,
+.experience__line{
   display: block;
   width: 2px;
   height: 110%;
@@ -488,7 +504,13 @@ bottom: 5rem;
   }
 
   .resume__left,
-  .resume__right{padding: 0 1.5rem;}
+  .resume__right{
+    padding: 0 1.5rem;
+  }
+
+  .generate-pdf{
+    display: inline-block;
+  }
 
   .section-title,
   .profile__description{
