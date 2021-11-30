@@ -72,6 +72,14 @@ body.dark-theme{
 
 /*========== Font size variables to scale cv ==========*/
 
+/* body.scale-cv{
+  --h1-font-size: 938rem;
+  --h2-font-size: 938rem;
+  --h3-font-size: .875rem;
+  --normal-font-size: .9813rem;
+  --small-font-size: .75rem;
+  --smaller-font-size: .688rem;
+} */
 
 /*========== Generate PDF button ==========*/
 
@@ -148,7 +156,7 @@ img {
 
 .bd-grid{
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .l-header{
@@ -494,7 +502,7 @@ bottom: 5rem;
 
   .resume{
     display: grid;
-    grid-template-columns:.5fr 1fr ;
+    grid-template-columns:.4fr 1fr ;
     background-color: var(--container-color);
     box-shadow: 0 0 8px rgba(13,12,12, .15);
   }

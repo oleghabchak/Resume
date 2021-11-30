@@ -81,28 +81,26 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-/*==================== REDUCE THE SIZE AND PRINT ON AN A4 SHEET ====================*/ 
-
-
-/*==================== REMOVE THE SIZE WHEN THE CV IS DOWNLOADED ====================*/ 
-
-
 /*==================== GENERATE PDF ====================*/ 
 // PDF generated area
-
+let areaCv = document.getElementById('area-cv')
+let resumeButton = document.getElementById('resume-button')
 
 // Html2pdf options
-
+let opt = {
+    margin:       0,
+    filename:     'resume-Habchak.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 4 },
+    jsPDF:        { unit: 'in', format: 'a3', orientation: 'portrait' }
+  };
 
 // Function to call areaCv and Html2Pdf options 
+function generateResume() {
+    html2pdf(areaCv, opt)
+}
 
-
-// When the button is clicked, it executes the three functions
-
-    // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
-
-
-    // 2. The PDF is generated
-
-
-    // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
+// When the button is clicked //  The PDF is generated
+resumeButton.addEventListener('click', () => {
+generateResume()
+})
