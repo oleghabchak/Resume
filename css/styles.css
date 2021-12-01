@@ -30,6 +30,7 @@
   --mb-1: .5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
+  --mb-4: 2rem;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
@@ -68,18 +69,6 @@ body.dark-theme{
 .change-theme:hover{
   color: var(--title-color);
 }
- 
-
-/*========== Font size variables to scale cv ==========*/
-
-/* body.scale-cv{
-  --h1-font-size: 938rem;
-  --h2-font-size: 938rem;
-  --h3-font-size: .875rem;
-  --normal-font-size: .9813rem;
-  --small-font-size: .75rem;
-  --smaller-font-size: .688rem;
-} */
 
 /*========== Generate PDF button ==========*/
 
@@ -239,7 +228,14 @@ img {
 .active-link{
   color:var(--title-color);
 }
+.github{
+  text-decoration: underline;
+}
+.github:hover{
+  color: var(--title-color);
+  text-decoration-color: var(--title-color);
 
+}
 /*========== HOME ==========*/
 .home{
   position: relative;
@@ -291,6 +287,7 @@ gap: 1rem;
 .social__container{
 grid-template-columns: max-content;
 gap: 1rem;
+margin-left: 1rem;
 }
 
 .social__link{
@@ -332,6 +329,7 @@ gap: 1rem;
 .education__content,
 .experience__content{
   display: flex;
+  margin-bottom: .5rem;
 }
 
 .education__time,
@@ -357,6 +355,10 @@ margin-top: .25rem;
   height: 110%;
   background-color: var(--text-color-light);
   transform: translate(7px, 0)
+}
+.experience__company{
+  font-style:  italic;
+  font-size: var(--small-font-size);
 }
 
 .education__data{
@@ -387,7 +389,7 @@ margin-top: .25rem;
 .languages__name{
   display: flex;
   align-items: center;
-  margin-bottom: var(--mb-3);
+  margin-bottom: var(--mb-1);
 }
 
 .skills__circle,
@@ -402,8 +404,15 @@ margin-top: .25rem;
 
 /*========== CERTIFICATES ==========*/
 .certificate__title{
-  font-size: var(--h3-font-size);
+  font-size: var(--h2-font-size);
+  /* margin-bottom: var(--mb-1); */
+  /* margin-left: var(--mb-3); */
+}
+.certificate__content{
   margin-bottom: var(--mb-3);
+}
+.certificate__description{
+  margin-left: var(--mb-4);
 }
 
 /*========== REFERENCES ==========*/
@@ -414,6 +423,7 @@ margin-top: .25rem;
   
 .references__content{
   gap:.25rem;
+  margin-left: 80px;
 }
 
 .references__subtitle{
@@ -520,10 +530,10 @@ bottom: 5rem;
     display: inline-block;
   }
 
-  .section-title,
-  .profile__description{
+  /* .section-title, */
+  /* .profile__description{
     text-align: initial;
-  }
+  } */
 
   .home__container{
     gap: 1.5rem;
@@ -539,11 +549,13 @@ bottom: 5rem;
 
   .languages__content{
     grid-template-columns: repeat(3, max-content);
-    column-gap: 3.5rem;
+    column-gap: 7rem;
   }
 
   .interests__container{
     grid-template-columns: repeat(3, max-content );
-    column-gap: 5rem;
+    column-gap: 10rem;
+    padding: 0 3rem;
+
   }
 }
